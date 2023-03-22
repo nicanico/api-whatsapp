@@ -59,7 +59,6 @@ const getMessagensContato = (numeroTelefone, indice) => {
     contatosJSON.forEach(function (contato) {
         if (numeroCelular == contato.number) {
             const contact = contato.contacts[indiceContato].messages
-
             contact.forEach(function (mensagens) {
 
                 const mensagensJSON = {}
@@ -72,6 +71,7 @@ const getMessagensContato = (numeroTelefone, indice) => {
         } else {
             return false
         }
+
     })
 
     console.log(mensagensArray)
