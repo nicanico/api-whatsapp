@@ -18,7 +18,7 @@ const contatos = { "whats-users" :
                                           {
                                             "name": "Ana Maria",
                                             "description": "Frontend Developer",
-                                            "image": "img/contact1.png",
+                                            "image": "contact1.png",
                                             "messages": [
                                               {
                                                 "sender": "me",
@@ -45,7 +45,7 @@ const contatos = { "whats-users" :
                                           {
                                             "name": "Jane Smith",
                                             "description": "UI Designer",
-                                            "image": "img/contact2.png",
+                                            "image": "contact2.png",
                                             "messages": [
                                               {
                                                 "sender": "me",
@@ -72,7 +72,7 @@ const contatos = { "whats-users" :
                                           {
                                             "name": "Mark Johnson",
                                             "description": "Backend Developer",
-                                            "image": "img/contact3.png",
+                                            "image": "contact3.png",
                                             "messages": [
                                               {
                                                 "sender": "me",
@@ -99,7 +99,7 @@ const contatos = { "whats-users" :
                                           {
                                           "name": "Sarah Lee",
                                           "description": "Software Engineer",
-                                          "image": "img/contact4.png",
+                                          "image": "contact4.png",
                                           "messages": [
                                               {
                                               "sender": "me",
@@ -126,7 +126,7 @@ const contatos = { "whats-users" :
                                           {
                                           "name": "John Doe",
                                           "description": "Designer",
-                                          "image": "img/contact5.png",
+                                          "image": "contact5.png",
                                           "messages": [
                                               {
                                               "sender": "John Doe",
@@ -153,7 +153,7 @@ const contatos = { "whats-users" :
                                           {
                                           "name": "Julia Smith",
                                           "description": "Product Manager",
-                                          "image": "img/contact6.png",
+                                          "image": "contact6.png",
                                           "messages": [
                                               {
                                               "sender": "Julia Smith",
@@ -180,7 +180,7 @@ const contatos = { "whats-users" :
                                           {
                                           "name": "Max Kellerman",
                                           "description": "Marketing Manager",
-                                          "image": "img/contact7.png",
+                                          "image": "contact7.png",
                                           "messages": [
                                               {
                                               "sender": "Max Kellerman",

@@ -12,7 +12,7 @@ const raiz = contatos.contatos['whats-users']
 const getContatos = (numeroTelefone) => {
     const numeroCelular = numeroTelefone
     const contatosJSON = raiz.slice()
-    const arrayContatos = []
+    const contatos = []
     let status
 
     if (numeroCelular != undefined) {
@@ -28,7 +28,9 @@ const getContatos = (numeroTelefone) => {
                     listaDeContatos.name = card.name
                     listaDeContatos.description = card.description
                     listaDeContatos.image = card.image
-                    arrayContatos.push(listaDeContatos)
+                    listaDeContatos.messages = card.messages
+                    console.log(listaDeContatos)
+                    contatos.push(listaDeContatos)
                     status = true
                 })
 
@@ -40,41 +42,11 @@ const getContatos = (numeroTelefone) => {
 
 
     if (status) {
-        return arrayContatos
+        console.log(contatos)
+        return contatos
     } else {
         return false
     }
-
-}
-
-const getMessagensContato = (numeroTelefone, indice) => {
-    const numeroCelular = parseInt(numeroTelefone)
-    const indiceContato = indice
-    const contatosJSON = raiz.slice()
-    const mensagensArray = []
-
-    let status
-
-
-    contatosJSON.forEach(function (contato) {
-        if (numeroCelular == contato.number) {
-            const contact = contato.contacts[indiceContato].messages
-            contact.forEach(function (mensagens) {
-
-                const mensagensJSON = {}
-                mensagensJSON.sender = mensagens.sender
-                mensagensJSON.content = mensagens.content
-                mensagensJSON.time = mensagens.time
-                mensagensArray.push(mensagensJSON)
-                status = true
-            })
-        } else {
-            return false
-        }
-
-    })
-
-    console.log(mensagensArray)
 
 }
 
@@ -101,7 +73,7 @@ const getUsuario = (numeroTelefone) => {
 
 
     if (status) {
-
+        console.log(arrayUser)
         return arrayUser
     } else {
         return false
@@ -111,12 +83,11 @@ const getUsuario = (numeroTelefone) => {
 
 }
 
-// getContatos('11966578996')
+getContatos('11966578996')
 // getUsuario('11966578996')
 // getMessagensContato('11966578996', 1)
 
 module.exports = {
     getContatos,
-    getMessagensContato,
     getUsuario
 }
