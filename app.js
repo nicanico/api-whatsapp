@@ -17,23 +17,23 @@ app.use((request, response, next) => {
     next()
 })
 
-app.get('/v1/whatsapp/contatos/telefone', cors(), async function(request, response, next){
+app.get('/v1/whatsapp/contatos/telefone', cors(), async function (request, response, next) {
 
 
     let numero = request.query.numero
-    
+
     let statusCode
     let dadosContado = {}
 
     console.log(numero)
 
-    if(numero == '' || numero == undefined){
+    if (numero == '' || numero == undefined) {
         statusCode = 400
         dadosContado.message = 'Não foi possivel processar, verifique o número de telefone novamente'
     } else {
         let listaDeContatos = modulo.getContatos(numero)
 
-        if(listaDeContatos){
+        if (listaDeContatos) {
             statusCode = 200
             dadosContado = listaDeContatos
         } else {
@@ -46,25 +46,25 @@ app.get('/v1/whatsapp/contatos/telefone', cors(), async function(request, respon
 
 })
 
-app.get('/v1/whatsapp/contatos/telefone', cors(), async function(request, response, next){
+app.get('/v1/whatsapp/contatos/telefone/usuario', cors(), async function (request, response, next) {
 
 
     let numero = request.query.numero
-    
+
     let statusCode
     let dadosContado = {}
 
     console.log(numero)
 
-    if(numero == '' || numero == undefined){
+    if (numero == '' || numero == undefined) {
         statusCode = 400
         dadosContado.message = 'Não foi possivel processar, verifique o número de telefone novamente'
     } else {
-        let listaDeContatos = modulo.getMessagensContato(numero)
+        let usuario = modulo.getUsuario(numero)
 
-        if(listaDeContatos){
+        if (usuario) {
             statusCode = 200
-            dadosContado = listaDeContatos
+            dadosContado = usuario
         } else {
             statusCode = 404
         }
@@ -77,7 +77,7 @@ app.get('/v1/whatsapp/contatos/telefone', cors(), async function(request, respon
 
 
 
-app.listen(8080, function(){
+app.listen(8080, function () {
     console.log('Servidor no ar')
 })
 

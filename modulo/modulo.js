@@ -13,6 +13,7 @@ const getContatos = (numeroTelefone) => {
     const numeroCelular = numeroTelefone
     const contatosJSON = raiz.slice()
     const contatos = []
+    const user = []
     let status
 
     if (numeroCelular != undefined) {
@@ -20,16 +21,24 @@ const getContatos = (numeroTelefone) => {
             if (contato.number == numeroCelular) {
 
                 console.log(contato.nickname)
+                const userInformation = {}
 
+                // userInformation.userNickname = contato.nickname
+                // userInformation.userNumber = contato.number
+                // userInformation.image = contato['profile-image']
+                // userInformation.color = contato.background
+                // user.push(userInformation)
+                // contatos.push(user)
                 const sender = contato.contacts
                 sender.forEach(function (card) {
 
                     const listaDeContatos = {}
+
                     listaDeContatos.name = card.name
                     listaDeContatos.description = card.description
                     listaDeContatos.image = card.image
                     listaDeContatos.messages = card.messages
-                    console.log(listaDeContatos)
+
                     contatos.push(listaDeContatos)
                     status = true
                 })
@@ -63,6 +72,7 @@ const getUsuario = (numeroTelefone) => {
                 user.number = usuario.number
                 user.name = usuario.nickname
                 user.image = usuario['profile-image']
+                user.color = usuario.background
                 arrayUser.push(user)
                 status = true
             }
@@ -83,8 +93,8 @@ const getUsuario = (numeroTelefone) => {
 
 }
 
-getContatos('11966578996')
-// getUsuario('11966578996')
+//getContatos('11966578996')
+getUsuario('11966578996')
 // getMessagensContato('11966578996', 1)
 
 module.exports = {
