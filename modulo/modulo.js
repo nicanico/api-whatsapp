@@ -73,7 +73,7 @@ const getUsuario = (numeroTelefone) => {
                 user.name = usuario.nickname
                 user.image = usuario['profile-image']
                 user.color = usuario.background
-                arrayUser.push(user)
+
                 status = true
             }
         })
@@ -83,8 +83,8 @@ const getUsuario = (numeroTelefone) => {
 
 
     if (status) {
-        console.log(arrayUser)
-        return arrayUser
+        console.log(user)
+        return user
     } else {
         return false
     }

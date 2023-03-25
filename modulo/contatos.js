@@ -11,9 +11,9 @@ const contatos = {
           "end": "null"
         }
         ,
-        "profile-image": "img/contact1.png",
+        "profile-image": "contact1.png",
         "number": "11987876567",
-        "background": "#fccc5b",
+        "background": "#EEDD82",
         "contacts":
           [
             {
@@ -214,7 +214,7 @@ const contatos = {
         ,
         "profile-image": "contact2.png",
         "number": "11966578996",
-        "background": "#fccc5b",
+        "background": "#DA70D6",
         "contacts":
           [
             {
@@ -413,9 +413,9 @@ const contatos = {
           "end": "null"
         }
         ,
-        "profile-image": "img/contact200.png",
+        "profile-image": "contact200.png",
         "number": "11955577796",
-        "background": "#cc5bfc",
+        "background": "#FFC0CB",
         "contacts":
           [
             {
@@ -533,9 +533,9 @@ const contatos = {
           "end": "null"
         }
         ,
-        "profile-image": "img/contact230.png",
+        "profile-image": "contact230.png",
         "number": "1194457796",
-        "background": "#c00bfc",
+        "background": "#87CEEB",
         "contacts":
           [
             {
